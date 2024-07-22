@@ -1,0 +1,62 @@
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 80vh; /* Ajusta la altura según tus necesidades */
+    padding: 16px;
+    color: #fff;
+  }
+
+  .card-wrapper {
+    position: relative; /* Necesario para posicionar el badge */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-type {
+    font-size: 0.875rem;
+    background-color: #28a745;
+    z-index: 1;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .card-type.default {
+    background-color: #6c757d; /* Color de fondo para el badge por defecto */
+  }
+  .card-type.collection {
+    background-color: #818438; /* Color de fondo para el badge por defecto */
+  }
+  .card-type.limited {
+    background-color: #222245; /* Color de fondo para el badge por defecto */
+  }
+  
+  .card-type.custom {
+    background-color: #28a745; /* Color de fondo para un tipo personalizado, si es necesario */
+  }
+  
+  /* Opcional: Agregar un contorno o sombra al badge para destacar */
+  .card-type::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  

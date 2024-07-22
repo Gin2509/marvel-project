@@ -1,0 +1,53 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  nav {
+    padding: 30px;
+  
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+  
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+  
+    &__content {
+      padding: 16px;
+  
+      &__title {
+        font-size: 1.5em;
+        margin: 0;
+        color: #333;
+      }
+  
+      &__description {
+        font-size: 1em;
+        color: #666;
+        margin-top: 8px;
+      }
+    }
+  }
