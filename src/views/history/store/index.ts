@@ -52,9 +52,13 @@ export const useSeriesStore = defineStore("series", {
       this.seriesHistory = this.seriesHistory.filter((serie: SeriesDto) => serie.id !== serieId);
     }
   },
+  
+  
   getters: {
     isFavorite: (state) => (id: number): boolean => {
       return state.seriesFavorite.some((s: SeriesDto) => s.id === id);
     },
   },
+  persist: true,
+  
 });

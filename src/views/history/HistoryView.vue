@@ -33,18 +33,17 @@ import TabContent from '../../components/TabContent.vue';
 
 const activeTab = ref('favorites');
 const {seriesHistory, seriesFavorite} = storeToRefs(useSeriesStore());
-// Usa directamente las propiedades del store
 
 </script>
 
 <style scoped>
 .tab-list {
-  display: flex; /* Hacer que las pestañas se alineen horizontalmente */
+  display: flex; 
   padding: 0.5rem;
   margin: 0;
   gap:4rem;
   background-color: #4b4a4a;
   justify-content: center;
-  list-style: none; /* Eliminar las viñetas */
+  list-style: none; 
 }
 </style>

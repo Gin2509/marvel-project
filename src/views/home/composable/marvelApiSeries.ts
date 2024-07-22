@@ -8,7 +8,7 @@ export default function useSeries() {
   const loading = ref(false);
   const isError = ref(false);
   const page = ref<number>(1);
-  const limit = 20; // Número de elementos por página
+  const limit = 20;
   const seriesDetail = ref<SeriesDto>({} as SeriesDto);
 
   const fetchSeries = async () => {

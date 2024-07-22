@@ -4,11 +4,9 @@
     <div ref="scrollContainer" class="scroll-container" @scroll="onScroll" >
       <template v-if="series?.length">
         <div v-for="item in series" :key="item.id" class="card-wrapper">
-          <!-- Mostrar el badge con el tipo de la serie -->
           <div :class="['card-type', getTypeClass(item.type)]">
             {{ item.type || 'Default' }}
           </div>
-          <!-- Utilizar el componente SeriesCard -->
           <SeriesCard :item="item" />
         </div>
       </template>
@@ -26,19 +24,23 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import useSeries from "@/views/home/composable/marvelApiSeries";
 import SeriesCard from "@/components/SeriesCard.vue";
 
 const { series, fetchSeries, loading, isError } = useSeries();
 const scrollContainer = ref<HTMLElement>();
 
-const getTypeClass = (type:string) => {
+
+
+const getTypeClass = computed(() => {
+  return (type:string) => {
   switch (type) {
     case 'collection': return 'collection';
     case 'limited': return 'limited';
     default: return 'default'; // Clase predeterminada para tipos no reconocidos
   }}
+})
 const onScroll = () => {
   if (scrollContainer.value) {
     const { scrollTop, scrollHeight, clientHeight } = scrollContainer.value;

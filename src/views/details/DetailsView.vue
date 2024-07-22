@@ -125,24 +125,24 @@ onMounted(async () => {
   top:14%;
 }
 .tab-list {
-  display: flex; /* Hacer que las pestañas se alineen horizontalmente */
+  display: flex; 
   padding: 0.5rem;
   margin: 0;
   gap:4rem;
   background-color: #4b4a4a;
   justify-content: center;
-  list-style: none; /* Eliminar las viñetas */
+  list-style: none; 
 }
 .section_detail {
   display: flex;
-  flex-direction: column; /* Organiza los elementos en una columna */
-  align-items: center; /* Centra horizontalmente los elementos dentro de la sección */
-  text-align: center; /* Centra el texto en cada elemento */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados opcionales */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  max-width: 600px; /* Limita el ancho máximo de la sección */
-  margin: auto; /* Centra la sección horizontalmente en su contenedor */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+  margin: auto; 
 }
 h1 {
   margin-bottom: 1rem; /* Espacio debajo del título */
